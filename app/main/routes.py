@@ -16,3 +16,8 @@ def index():
     # get all the posts for displaying
     posts = Post.query.order_by(desc(Post.timestamp)).all()
     return render_template('index.html', posts=posts, User=User, quote=response)
+
+@bp.route('/post/<post_id>', methods=['GET', 'POST'])
+def post(post_id):
+    post = Post.query.get(post_id)
+    return render_template('post.html', post=post)
