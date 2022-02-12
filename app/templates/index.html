@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {# hero  #}
+    <div class="hero">
+        {% if quote %}
+        <div class="hero-text">
+            <p id="quote-indicator">Quote of the day</p>
+            <h1>"{{ quote.quote }}"</h1>
+            <p id="subtitle">Please read through below to see what's going on in our community</p>
+        </div>
+        {% else %}
+        <div class="hero-text">
+            <h1>Understanding our community</h1>
+            <p>New posts</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="posts">
+        <div class="hero">
+            <h1>Posts</h1>
+            <a class="add-button" href="{{ url_for("main.add_post") }}">Add Post</a>
+        </div>
+        {% if posts %}
+            {% for post in posts %}
+                <div class="post">
+                    <h1>{{ post.title }}</h1>
+                    <h2>Author: {{ User.query.get(post.user_id).username }}</h2>
+                    <h2>Date Posted: {{ post.timestamp.date().day }}/{{ post.timestamp.date().month}}/{{ post.timestamp.date().year}}</h2>
+                    <a href="{{ url_for('main.post', post_id=post.id) }}">Read More...</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1 class="no-posts">0 posts</h1>
+        {% endif %}
+    </div>
+{% endblock %}

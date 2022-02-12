@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Share It</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {# navigation bar #}
+    <nav>
+        <a class="nav-title" href="{{ url_for('main.index') }}">Share It</h1>
+        {% if current_user.is_authenticated %}
+        <div class="links nav-large-links">
+        {% else  %}
+        <div class="links nav-small-links">
+        {% endif %}
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('auth.login') }}">Log In</a>
+            {% else %}
+            <a href="{{ url_for('auth.logout') }}">Log Out</a>
+            {% endif %}
+            <a href="{{ url_for('auth.signup') }}">Sign Up</a>
+        </div>
+    </nav>
+    {# flashed messages #}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li class="flashed-message">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith%}
+
+    {# content block  #}
+    {% block content %}{% endblock %}
+</body>
+</html>
