@@ -45,7 +45,7 @@ def user(user):
         return redirect(url_for('auth.login'))
 
     user = User.query.filter_by(username=user).first()
-    pitches = Pitch.query.filter_by(author=user).all()
+    pitches = pitches.query.filter_by(author=user).all()
     return render_template('user.html', user=user, pitches=pitches)
 
 @bp.route('/comments/<post>')

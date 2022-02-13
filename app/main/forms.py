@@ -6,9 +6,9 @@ from app.models import User
 
 class AddForm(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
-    body = TextAreaField('Body', [validators.optional(), validators.length(max=500)])
+    body = TextAreaField('Body', [validators.optional(), validators.length(max=1000)])
     submit = SubmitField('Submit')
 
 class AddCommentForm(FlaskForm):
-    body = TextAreaField('Comment', [validators.optional(), validators.length(max=200)])
+    body = TextAreaField('Comment', [validators.optional(), validators.length(max=1000)])
     submit = SubmitField('Submit')
