@@ -1,11 +1,13 @@
 from flask import render_template, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user
 from sqlalchemy import desc
+import app
 from app.main import bp
 from app import db
 import requests
 from app.models import User, Post, Comment
 from app.main import forms
+
 
 @bp.route('/')
 def index():
