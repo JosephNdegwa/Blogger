@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FDFDFD;
+}
+
+.flashed-message {
+    list-style-type: none;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 120px;
+}
+
+nav .nav-title {
+    font-family: 'Viga', sans-serif;
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    grid-column: 2;
+    align-self: center;
+}
+
+nav .links {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.nav-small-links {
+    grid-column: 9 / span 3;
+}
+
+.nav-large-links {
+    grid-column: 8 / span 4;
+}
+
+nav .links a {
+    color: #222;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.hero-text {
+    grid-column: 2 / span 8;
+}
+
+.hero-text h1 {
+    color: #222;
+    font-size: 48px;
+    margin-top: 24px;
+    margin-bottom: 26px;
+    font-family: 'Viga', sans-serif;
+    text-transform: capitalize;
+}
+
+.hero-text p {
+    color: #4A4A4A;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.hero-text #quote-indicator {
+    font-size: 23px;
+}
+
+
+.hero-text #subtitle {
+    font-size: 23px;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+
+.posts .hero {
+    grid-column: 2 / span 11;
+}
+
+.add-button {
+    display: inline-block;
+    align-self: center;
+    text-decoration: none;
+    background-color: #222;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    margin-top: 33px;
+}
+
+.posts .hero h1 {
+    color: #222;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 18px;
+    font-family: 'Viga', sans-serif;
+    text-transform: capitalize;
+}
+
+.no-posts {
+    margin-top: 0;
+    grid-column: 2;
+    color: #4A4A4A;
+    font-size: 18px;
+}
+
+.post {
+    border: 1px solid #d5d5d5;
+    grid-column: 2 / span 5;
+    margin-bottom: 30px;
+    border-radius: 9px;
+    padding-left: 20px;
+    padding-bottom: 14px;
+}
+
+.post h1 {
+    color: #222;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.post h2 {
+    font-size: 17px;
+    color: #4A4A4A;
+    font-weight: 400;
+}
+
+.post a {
+    color: #222;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.add-form {
+    margin-top: 185px;
+}
+
+.add-form textarea {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    color: #454545;
+}
+
+.hero-img {
+    grid-column: 6 / span 6;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px 300px 80px;
+}
+
+.login-container .form-title {
+    font-family: 'Viga', sans-serif;
+    grid-column: 2 / span 11;
+    align-self: center;
+    font-size: 60px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    color: #222;
+}
+
+.login-container form {
+    grid-column: 2 / span 11;
+    align-self: center;
+}
+
+.required-field {
+    display: inline-block;
+    margin-top: 5px;
+    color: #d50000;
+}
+
+.login-container p {
+    grid-column: 2 / span 3;
+}
+
+.login-container label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #4d4d4d;
+}
+
+.login-container input {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    color: #454545;
+}
+
+.login-container input:focus {
+    border: 1px solid #d5d5d5;
+}
+
+.signup-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px 420px 80px;
+}
+
+.settings-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px 345px 80px;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs {
+    width: 450px;
+    border-bottom: 1px solid #222;
+}
+
+.tab-underline {
+    display: inline-block;
+    border-bottom: 3px solid #222;
+    padding-right: 80px;
+    padding-left: 80px;
+    text-align: center;
+}
+
+.tab-text-left {
+    padding-left: 50px;
+}
+
+.tab-text-right {
+    padding-left: 70px;
+    padding-right: 69px;
+}
+
+.tabs a {
+    text-decoration: none;
+    display: inline-block;
+    color: #222;
+    font-size: 29px;
+    font-family: 'Viga';
+}
+
+#countdown-timer {
+    font-family: 'Viga', sans-serif;
+    font-size: 90px;
+    margin-top: 36px;
+    margin-bottom: 33px;
+    color: #222;
+}
+
+.control-buttons button {
+    background-color: #222;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 25px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.profile-container .text {
+    grid-column: 2 / span 3;
+}
+
+.profile-container .text h1 {
+    color: #222;
+    font-size: 70px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    font-family: 'Viga', sans-serif;
+}
+
+.profile-container .text h2 {
+    color: #4A4A4A;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 22px;
+}
+
+.profile-container .text p {
+    color: #222;
+    margin-top: 36px;
+    font-size: 18px;
+    font-family: 'Viga', sans-serif;
+}
+
+.post-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-title {
+    font-size: 51px;
+    color: #222;
+}
+
+.post-author {
+    font-size: 21px;
+    margin: 0;
+    font-weight: 400;
+    color: #474747;
+}
+
+.post-body {
+    width: 65ch;
+    line-height: 1.6;
+    font-size: 26px;
+    color: #222;
+}
+
+.post-comments {
+    color: #222;
+    font-size: 18px; 
+}
+
+.comments-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.comments-container .title {
+    grid-column: 2 / span 11;
+}
+
+.comments-container .comments {
+    grid-column: 2 / span 4;
+}
+
+.comments-container .comments h4 {
+    margin: 10px 0;
+    font-size: 21px;
+    font-weight: 400;
+} 
+
+.comments-btn {
+    margin-top: 0;
+}
+
+.post-margin {
+    margin-top: 20px;
+}

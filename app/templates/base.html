@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Share It</title>
+    <title>Blogger</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     {# navigation bar #}
     <nav>
-        <a class="nav-title" href="{{ url_for('main.index') }}">Share It</h1>
+        <a class="nav-title" href="{{ url_for('main.index') }}">Blogger</h1>
         {% if current_user.is_authenticated %}
         <div class="links nav-large-links">
         {% else  %}
