@@ -45,7 +45,7 @@ def user(user):
     # go to login in page if user is not logged in
     if current_user.is_anonymous:
         return redirect(url_for('auth.login'))
-
+    
     user = User.query.filter_by(username=user).first()
     pitches = pitches.query.filter_by(author=user).all()
     return render_template('user.html', user=user, pitches=pitches)

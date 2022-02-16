@@ -4,6 +4,7 @@ from app.models import User
 from app.auth import bp
 from app.auth import forms
 from app import db
+from ..email import mail_message
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -47,6 +48,8 @@ def signup():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
+        mail_message("Welcome to Blogger","email/welcome_user",user.email,user=user)
+
         flash("Congratulations, you are now a registered user!")
         return redirect(url_for('auth.login'))
     return render_template('auth/signup.html', form=form)
