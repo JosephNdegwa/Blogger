@@ -1,12 +1,13 @@
 from app import create_app, db
 from app.models import User, Post, Comment
-from flask_script import Manager,Server
+from flask_script import Manager
+from flask_migrate import Migrate,MigrateCommand
 
-app = create_app('production')
+app = create_app()
 
 
 manager = Manager(app)
-manager.add_command('server',Server)
+manager.add_command('db',MigrateCommand)
 
 
     
