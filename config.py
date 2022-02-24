@@ -1,4 +1,3 @@
-from distutils.command.config import config
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -25,8 +24,12 @@ class ProdConfig(Config):
     
     pass
 
+class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://kariuki_ndegwa:515021@localhost/blogger'
+    DEBUG = True
 
 
 config_options = {
+'development':DevConfig,
 'production':ProdConfig
 }
