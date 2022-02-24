@@ -12,6 +12,7 @@ Navigate to `https://blogger98.herokuapp.com/` and serve on the web
 * Python
 * Flask
 * Heroku CLI
+* Psql
 * Visual Studio
 
 # To-do
