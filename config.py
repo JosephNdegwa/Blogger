@@ -29,7 +29,7 @@ class DevConfig(Config):
     DEBUG = True
 
 
-config_options = {
+config = {
 'development':DevConfig,
 'production':ProdConfig
 }
